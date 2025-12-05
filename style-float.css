@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    padding: 20px;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.clearfix::after,
+.sub-row::after,
+.content-wrapper::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.fl-left {
+    float: left;
+}
+
+.fl-right {
+    float: right;
+}
+
+.block {
+    padding: 20px;
+    background-color: #1e1e1e;
+    border: 1px solid #2d2d30;
+    margin-bottom: 20px;
+}
+
+.block-1 {
+    background: linear-gradient(135deg, #1f4037, #99f2c8);
+    border-bottom: 2px solid #000;
+}
+
+.block-1 h1, .block-1 h2 {
+    color: #121212;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.block-2 { 
+    background-color: #252526;
+    border-left: 4px solid #99f2c8;
+    border-right: 3px solid #444;
+    min-height: 350px;
+}
+
+.block-3 { 
+    background-color: #1e1e1e;
+    border-right: 3px solid #444;
+    min-height: 350px;
+}
+
+.block-4 { 
+    background-color: #202020;
+    border: 3px solid #444;
+    border-left-width: 3px;
+}
+
+.block-5 { 
+    background-color: #252526;
+    border-right: 4px solid #99f2c8;
+    border-left: 3px solid #444;
+}
+
+.block-6 {
+    background-color: #333;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=600&q=80');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white;
+    clear: both;
+    padding: 50px 20px;
+}
+
+.block-6 img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #99f2c8;
+}
+
+.block-7 {
+    background-color: #121212;
+    border-top: 2px solid #99f2c8;
+    color: #888;
+    clear: both;
+    margin-top: 50px;
+    padding: 30px 20px;
+    display: block;
+}
+
+.block-7 h3, .block-7 span {
+    color: #99f2c8;
+    margin: 0;
+    font-size: 1em;
+}
+
+h1, h2, h3 { 
+    color: #99f2c8;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+p { 
+    margin-bottom: 10px;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+ul { 
+    list-style: none;
+}
+
+li { 
+    margin-bottom: 8px;
+}
+
+a {
+    display: block;
+    padding: 8px 12px;
+    color: #fff;
+    text-decoration: none;
+    background: #2d2d30;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+
+a:hover, a.active {
+    background-color: #3e3e42;
+    color: #99f2c8;
+    border-left: 3px solid #99f2c8;
+    padding-left: 18px;
+}
+
+.content-wrapper {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    border-spacing: 20px 0;
+    margin-bottom: 30px;
+}
+
+.big-col-left {
+    display: table-cell;
+    width: 50%;
+    vertical-align: top;
+}
+
+.big-col-right {
+    display: table-cell;
+    width: 50%;
+    vertical-align: top;
+    position: relative;
+    overflow: hidden;
+}
+
+.sub-row {
+    margin-left: -10px;
+    width: calc(100% + 20px);
+}
+
+.sub-col {
+    float: left;
+    width: 50%;
+    padding: 0 10px;
+}
+
+.big-col-right .sub-col {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    padding: 0 10px;
+    float: none;
+}
+
+.big-col-right .sub-col:first-child {
+    left: 0;
+}
+
+.big-col-right .sub-col:last-child {
+    left: 50%;
+}
+
+.big-col-right .sub-col .block {
+    height: 100%;
+    margin-bottom: 0;
+}
+
+.map-row {
+    width: 100%;
+    float: left;
+}
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        display: block;
+        border-spacing: 0;
+    }
+    
+    .big-col-left,
+    .big-col-right {
+        display: block;
+        width: 100%;
+        padding: 0;
+        position: static;
+    }
+    
+    .big-col-right .sub-col {
+        position: static;
+        float: none;
+        width: 100%;
+        height: auto;
+        padding: 0;
+    }
+    
+    .big-col-right .sub-col .block {
+        height: auto;
+        margin-bottom: 20px;
+    }
+    
+    .sub-col {
+        float: none;
+        width: 100%;
+        padding: 0;
+    }
+
+    .content-wrapper,
+    .sub-row {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .fl-left, .fl-right {
+        float: none;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    .block-1 h1 { 
+        font-size: 1.5em;
+    }
+    
+    .block-2, .block-3 {
+        min-height: auto;
+    }
+}
